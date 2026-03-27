@@ -24,23 +24,14 @@
     </nav>
 </header>
 
-<section id="about" class="fade-in">
+<section id="about" class="hidden">
     <h2>About Me</h2>
-    <p>
-        Hello! I am <b>Samruddhi Sanjay Joshi</b>, currently pursuing Computer Engineering 
-        at Vidyalankar Institute of Technology, Mumbai.
-    </p>
-    <p>
-        I am passionate about web development and enjoy building real-world applications 
-        like a Unified Vaccine Booking System. I have also published a research paper 
-        based on this project in both Journal and Conference.
-    </p>
-    <p>
-        I am always eager to learn new technologies and grow as a developer.
-    </p>
+    <p>Hello! I am <b>Samruddhi Sanjay Joshi</b>, pursuing Computer Engineering at Vidyalankar Institute of Technology, Mumbai.</p>
+    <p>I am passionate about web development and built a Unified Vaccine Booking System. I also published a research paper in both Journal and Conference.</p>
+    <p>I am eager to learn and grow as a developer.</p>
 </section>
 
-<section id="education" class="fade-in">
+<section id="education" class="hidden">
     <h2>Education</h2>
     <ul>
         <li><b>B.E Computer Engineering</b><br>Vidyalankar Institute of Technology, Mumbai</li>
@@ -48,7 +39,7 @@
     </ul>
 </section>
 
-<section id="skills" class="fade-in">
+<section id="skills" class="hidden">
     <h2>Skills</h2>
     <div class="skills">
         <span>Java</span>
@@ -62,15 +53,12 @@
     </div>
 </section>
 
-<section id="projects" class="fade-in">
+<section id="projects" class="hidden">
     <h2>Projects</h2>
 
     <div class="card">
         <h3>Unified Vaccine Booking System</h3>
-        <p>
-            Developed a web-based vaccination booking system for both humans and animals 
-            with features like login, registration, and slot booking.
-        </p>
+        <p>Web-based system for booking vaccines with login, registration, and slot management.</p>
         <p><b>Technologies:</b> Java, Servlets, HTML, CSS</p>
     </div>
 
@@ -81,12 +69,12 @@
 
     <div class="card">
         <h3>Web Development Internship</h3>
-        <p>Hands-on experience in Java-based web applications.</p>
+        <p>Worked on Java-based web applications.</p>
     </div>
 
 </section>
 
-<section id="resume" class="fade-in">
+<section id="resume" class="hidden">
     <h2>My Resume</h2>
     <img src="resume.jpg" class="resume-img">
     <div class="buttons">
@@ -94,7 +82,7 @@
     </div>
 </section>
 
-<section id="contact" class="fade-in">
+<section id="contact" class="hidden">
     <h2>Contact</h2>
 
     <p>Email: 
@@ -118,7 +106,7 @@
     <p>© 2026 Samruddhi Joshi</p>
 </footer>
 
-<!-- Typing Animation Script -->
+<!-- Typing Effect -->
 <script>
 const text = "Hi, I'm Samruddhi Joshi";
 let i = 0;
@@ -131,6 +119,20 @@ function typingEffect() {
     }
 }
 typingEffect();
+</script>
+
+<!-- Scroll Animation -->
+<script>
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach(el => observer.observe(el));
 </script>
 
 </body>
