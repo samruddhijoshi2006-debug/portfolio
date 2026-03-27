@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -67,11 +70,18 @@ section {
     background: white;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: 0.3s;
 }
 
-section:hover {
-    transform: translateY(-5px);
+/* SCROLL ANIMATION */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* SKILLS */
@@ -144,20 +154,6 @@ section:hover {
 
 .resume-img:hover {
     transform: scale(1.05);
-}
-
-/* ANIMATION */
-.fade-in {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeUp 1s forwards;
-}
-
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* TYPING */
