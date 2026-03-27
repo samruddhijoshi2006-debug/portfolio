@@ -13,19 +13,18 @@ body {
 /* HEADER */
 header {
     text-align: center;
-    padding: 30px 15px;
+    padding: 30px;
     background: linear-gradient(135deg, #4facfe, #00f2fe);
     color: white;
-    animation: fadeIn 1s ease-in;
 }
 
+/* PROFILE */
 .profile-img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    object-fit: cover;
     border: 4px solid white;
-    transition: transform 0.3s;
+    transition: 0.3s;
 }
 
 .profile-img:hover {
@@ -68,16 +67,11 @@ section {
     background: white;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    transition: 0.3s;
 }
 
 section:hover {
     transform: translateY(-5px);
-}
-
-h2 {
-    border-bottom: 2px solid #4facfe;
-    margin-bottom: 15px;
 }
 
 /* SKILLS */
@@ -92,29 +86,26 @@ h2 {
 }
 
 .skills span:hover {
-    background: #007bff;
     transform: scale(1.1);
 }
 
-/* PROJECT CARDS */
+/* CARDS */
 .card {
-    background: #eef7ff;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
     padding: 15px;
     margin-top: 15px;
     border-left: 5px solid #4facfe;
-    border-radius: 8px;
-    transition: 0.3s;
+    border-radius: 10px;
+    transition: 0.4s;
 }
 
 .card:hover {
-    transform: scale(1.03);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-/* BUTTONS */
-.buttons {
-    margin-top: 15px;
-}
-
+/* BUTTON */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -122,12 +113,61 @@ h2 {
     color: white;
     border-radius: 25px;
     text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    left: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+/* RESUME */
+.resume-img {
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto;
+    display: block;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
-.btn:hover {
-    background: #005582;
-    transform: scale(1.1);
+.resume-img:hover {
+    transform: scale(1.05);
+}
+
+/* ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TYPING */
+.typing::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
 }
 
 /* FOOTER */
@@ -136,22 +176,6 @@ footer {
     padding: 15px;
     background: #333;
     color: white;
-}
-
-/* ANIMATION */
-.fade-in {
-    animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* MOBILE */
