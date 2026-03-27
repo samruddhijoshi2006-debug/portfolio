@@ -10,8 +10,8 @@
 <body>
 
 <header>
-    <img src="profile (2).jpeg" class="profile-img">
-    <h1>Samruddhi S. Joshi</h1>
+    <img src="profile (2).jpg" class="profile-img">
+    <h1 class="typing"></h1>
     <p>Computer Engineering Student</p>
 
     <nav>
@@ -27,14 +27,13 @@
 <section id="about" class="fade-in">
     <h2>About Me</h2>
     <p>
-        Hello! I am <b>Samruddhi Sanjay Joshi</b>, currently pursuing a Bachelor's 
-        degree in Computer Engineering from Vidyalankar Institute of Technology, Mumbai.
+        Hello! I am <b>Samruddhi Sanjay Joshi</b>, currently pursuing Computer Engineering 
+        at Vidyalankar Institute of Technology, Mumbai.
     </p>
     <p>
-        I have a strong interest in web development and software engineering, and I enjoy 
-        building practical and user-friendly applications. During my academic journey, 
-        I have developed a Unified Vaccine Booking System and also published a research 
-        paper based on it.
+        I am passionate about web development and enjoy building real-world applications 
+        like a Unified Vaccine Booking System. I have also published a research paper 
+        based on this project in both Journal and Conference.
     </p>
     <p>
         I am always eager to learn new technologies and grow as a developer.
@@ -44,11 +43,8 @@
 <section id="education" class="fade-in">
     <h2>Education</h2>
     <ul>
-        <li><b>B.E Computer Engineering</b><br>
-        Vidyalankar Institute of Technology, Mumbai</li>
-
-        <li><b>Diploma Engineering</b><br>
-        RC Patel Polytechnic, Shirpur – <b>92%</b></li>
+        <li><b>B.E Computer Engineering</b><br>Vidyalankar Institute of Technology, Mumbai</li>
+        <li><b>Diploma Engineering</b><br>RC Patel Polytechnic, Shirpur – <b>92%</b></li>
     </ul>
 </section>
 
@@ -80,30 +76,21 @@
 
     <div class="card">
         <h3>Research Paper Publication</h3>
-        <p>
-            Published research paper in both <b>Journal</b> and <b>Conference</b>.
-        </p>
+        <p>Published in both <b>Journal</b> and <b>Conference</b>.</p>
     </div>
 
     <div class="card">
         <h3>Web Development Internship</h3>
-        <p>
-            Gained hands-on experience in Java-based web development.
-        </p>
+        <p>Hands-on experience in Java-based web applications.</p>
     </div>
 
 </section>
 
-<!-- RESUME SECTION -->
 <section id="resume" class="fade-in">
     <h2>My Resume</h2>
-
-    <!-- Resume Image -->
-    <img src="resume.jpeg" class="resume-img">
-
-    <!-- Button -->
+    <img src="resume.jpg" class="resume-img">
     <div class="buttons">
-        <a href="resume.jpeg" target="_blank" class="btn">View Full Resume</a>
+        <a href="resume.jpg" target="_blank" class="btn">View Resume</a>
     </div>
 </section>
 
@@ -125,12 +112,26 @@
     <div class="buttons">
         <a href="https://www.linkedin.com/in/samruddhi-joshi-4b11a1379" target="_blank" class="btn">LinkedIn</a>
     </div>
-
 </section>
 
 <footer>
     <p>© 2026 Samruddhi Joshi</p>
 </footer>
+
+<!-- Typing Animation Script -->
+<script>
+const text = "Hi, I'm Samruddhi Joshi";
+let i = 0;
+
+function typingEffect() {
+    if (i < text.length) {
+        document.querySelector(".typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typingEffect, 80);
+    }
+}
+typingEffect();
+</script>
 
 </body>
 </html>
